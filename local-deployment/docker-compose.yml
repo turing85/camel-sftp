@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  # apache activemq-artemis
+  sftp:
+    image: atmoz/sftp
+    container_name: sftp
+    ports:
+      - "10022:22"
+    tmpfs:
+      - /home/foo/upload:mode=777,rw
+    command:
+      foo:pass
